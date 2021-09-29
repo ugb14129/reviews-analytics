@@ -7,7 +7,10 @@ with open('reviews.txt' , 'r') as f:
 		if count % 1000 == 0:
 			print(len(data))
 
-print(len(data))
-print(data[0])
-print('---------------------------')
-print(data[1])
+print('Finished Reading Data', 'Total', len(data), 'reviews')
+
+sum_len = 0
+for review in data:
+	sum_len = sum_len + len(review)
+
+print('The average amount of word in the each reviews is ', sum_len/len(data))
