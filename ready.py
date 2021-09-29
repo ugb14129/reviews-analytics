@@ -14,3 +14,10 @@ for review in data:
 	sum_len = sum_len + len(review)
 
 print('The average amount of word in the each reviews is ', sum_len/len(data))
+
+count_data = []
+for r in data:
+	if len(r) < 100:
+		count_data.append(r)
+print('Total', len(count_data), 'reviews less than 100 words.')		
+print(count_data[0])
